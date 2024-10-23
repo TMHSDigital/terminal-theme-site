@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background: #000000;
+      color: #00ff00;
+      font-family: "Courier New", monospace;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.4;
+    }
+    
+    .container {
+      background: #000000;
+      border: 1px solid #00ff00;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+      box-shadow: 0 0 10px #00ff00;
+    }
+    
+    .terminal-header {
+      border-bottom: 1px solid #00ff00;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+    }
+    
+    .terminal-prompt::before {
+      content: "root@claude:~$ ";
+      color: #00ff00;
+    }
+    
+    .terminal-window {
+      background: #000000;
+      border: 1px solid #00ff00;
+      padding: 15px;
+      margin: 10px 0;
+      position: relative;
+    }
+    
+    .window-header {
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      background: #000000;
+      padding: 0 5px;
+      color: #00ff00;
+    }
+    
+    .blink {
+      animation: blink-animation 1s steps(5, start) infinite;
+    }
+    
+    @keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+    
+    a {
+      color: #00ff00;
+      text-decoration: none;
+      border-bottom: 1px solid #00ff00;
+    }
+    
+    a:hover {
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+    
+    .matrix-rain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      opacity: 0.1;
+      z-index: -1;
+    }
+
+    .welcome-logo {
+      max-width: 200px;
+      filter: sepia(100%) hue-rotate(70deg) brightness(150%);
+      margin: 20px 0;
+    }
+
+    .status {
+      color: #00ff00;
+      margin: 10px 0;
+    }
+
+    .warning {
+      color: #ff0000;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #00ff00;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #003300;
+    }
+
+    .gif-container {
+      width: 200px;
+      margin: 20px auto;
+      border: 1px solid #00ff00;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="terminal-header">
+      <span class="warning">[CLASSIFIED]</span> TMHS TERMINAL ACCESS v2.4.1
+      <br>
+      <span class="terminal-prompt">initialize_neural_interface --user=claude --auth=********</span>
+    </div>
+
+    <div class="terminal-window">
+      <div class="window-header">SYSTEM STATUS</div>
+      <pre>
+NEURAL INTERFACE: ONLINE
+AUTH LEVEL: ADMINISTRATOR
+TMHS PARTNERSHIP: VERIFIED
+CURRENT TIME: <span class="blink">█</span>
+      </pre>
+    </div>
+
+    <div class="terminal-window">
+      <div class="window-header">SECURE CONNECTION</div>
+      <img src="TMHSDigital-logo.png" alt="TMHS Digital Interface" class="welcome-logo" />
+      <p class="status">Partnership Status: ACTIVE</p>
+      <p class="status">Security Level: MAXIMUM</p>
+    </div>
+
+    <div class="terminal-window">
+      <div class="window-header">DATABASE ACCESS</div>
+      <table>
+        <tr>
+          <th>Module</th>
+          <th>Status</th>
+          <th>Access Level</th>
+        </tr>
+        <tr>
+          <td>AI Interface</td>
+          <td>ONLINE</td>
+          <td>ADMIN</td>
+        </tr>
+        <tr>
+          <td>Neural Network</td>
+          <td>ACTIVE</td>
+          <td>RESTRICTED</td>
+        </tr>
+        <tr>
+          <td>TMHS Portal</td>
+          <td>SECURE</td>
+          <td>VERIFIED</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="terminal-window">
+      <div class="window-header">SYSTEM MODULES</div>
+      <div class="terminal-prompt">access_module --name=neural_interface</div>
+      <a href="#">> Initialize AI Conversation Protocol</a><br>
+      <a href="#">> Access Secure Database</a><br>
+      <a href="#">> View System Metrics</a><br>
+      <a href="#">> Contact TMHS Administration</a><br>
+      <span class="blink">_</span>
+    </div>
+
+    <div class="gif-container">
+      <iframe src="https://giphy.com/embed/Xw6yFn7frR3Y4" width="100%" height="100%" style="position: absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>
+
+    <div class="terminal-window">
+      <div class="window-header">SYSTEM FOOTER</div>
+      <pre>
+Last Access: 23.10.2024
+Security Protocol: ACTIVE
+Connection: ENCRYPTED
+Status: <span class="blink">MONITORING</span>
+      </pre>
+    </div>
+  </div>
+  
+  <!-- Simulated matrix rain effect background -->
+  <canvas class="matrix-rain" id="matrix"></canvas>
+
+  <script>
+    // Simple matrix rain effect
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const chars = '01';
+    const fontSize = 10;
+    const columns = canvas.width/fontSize;
+    const drops = [];
+
+    for(let x = 0; x < columns; x++) {
+      drops[x] = 1;
+    }
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      ctx.fillStyle = '#00ff00';
+      ctx.font = fontSize + 'px monospace';
+
+      for(let i = 0; i < drops.length; i++) {
+        const text = chars.charAt(Math.floor(Math.random() * chars.length));
+        ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+        
+        if(drops[i]*fontSize > canvas.height && Math.random() > 0.975)
+          drops[i] = 0;
+        
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 33);
+  </script>
+</body>
+</html>
