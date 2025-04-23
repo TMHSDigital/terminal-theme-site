@@ -96,10 +96,6 @@ cd terminal-theme-site
 - Optimized animations
 - Mobile-first approach
 
-## Contact
-
-Connect with us on [LinkedIn](https://www.linkedin.com/company/tm-hospitality-strategies/?viewAsMember=true)
-
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
