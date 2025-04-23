@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TMHS Terminal Interface</title>
   <style>
     body {
       background: #000000;
@@ -82,7 +85,7 @@
     }
 
     .welcome-logo {
-      height: 100px;  /* Smaller to match text height */
+      height: 100px;
       width: auto;
       margin: 0 20px;
       display: inline-block;
@@ -145,16 +148,12 @@
 
     <div class="terminal-window">
       <div class="window-header">SYSTEM STATUS</div>
-      <div class="status-container">
-        <pre class="status-text">NEURAL INTERFACE: ONLINE
+      <pre class="status-text">
+NEURAL INTERFACE: ONLINE
 AUTH LEVEL: ADMINISTRATOR
 TMHS PARTNERSHIP: VERIFIED
-CURRENT TIME: <span class="blink">█</span></pre>
-        <div class="logo-container">
-          <img src="TMHSDigital-logo.png" alt="TMHS Digital Interface" class="welcome-logo" />
-          <img src="TMHSDigital-logo2.png" alt="TMHS Digital Interface 2" class="welcome-logo" />
-        </div>
-      </div>
+CURRENT TIME: <span class="blink">█</span>
+      </pre>
     </div>
 
     <div class="terminal-window">
@@ -201,12 +200,16 @@ CURRENT TIME: <span class="blink">█</span></pre>
 
     <div class="terminal-window">
       <div class="window-header">SYSTEM FOOTER</div>
-      <pre>
-Last Access: 23.10.2024
+      <div class="status-container">
+        <pre class="status-text">Last Access: 23.10.2024
 Security Protocol: ACTIVE
 Connection: ENCRYPTED
-Status: <span class="blink">MONITORING</span>
-      </pre>
+Status: <span class="blink">MONITORING</span></pre>
+        <div class="logo-container">
+          <img src="TMHSDigital-logo.png" alt="TMHS Digital Interface" class="welcome-logo" />
+          <img src="TMHSDigital-logo2.png" alt="TMHS Digital Interface 2" class="welcome-logo" />
+        </div>
+      </div>
     </div>
   </div>
   
