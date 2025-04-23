@@ -4,6 +4,8 @@ A terminal-inspired theme. This site is hosted via [GitHub Pages](https://tmhsdi
 
 ---
 
+---
+
 ## 🌐 Live Demo
 
 Check out the live version of the site [here](https://tmhsdigital.github.io/terminal-theme-site/).
