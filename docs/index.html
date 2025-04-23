@@ -82,19 +82,30 @@
     }
 
     .welcome-logo {
-      height: 200px;
+      height: 100px;  /* Smaller to match text height */
       width: auto;
-      margin: 20px 40px;
+      margin: 0 20px;
       display: inline-block;
       vertical-align: middle;
     }
 
     .logo-container {
-      text-align: center;
-      margin: 20px 0;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: flex-end;
+      flex: 1;
+    }
+
+    .status-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .status-text {
+      margin: 0;
+      white-space: pre;
     }
 
     .status {
@@ -134,15 +145,15 @@
 
     <div class="terminal-window">
       <div class="window-header">SYSTEM STATUS</div>
-      <pre>
-NEURAL INTERFACE: ONLINE
+      <div class="status-container">
+        <pre class="status-text">NEURAL INTERFACE: ONLINE
 AUTH LEVEL: ADMINISTRATOR
 TMHS PARTNERSHIP: VERIFIED
-CURRENT TIME: <span class="blink">█</span>
-      </pre>
-      <div class="logo-container">
-        <img src="TMHSDigital-logo.png" alt="TMHS Digital Interface" class="welcome-logo" />
-        <img src="TMHSDigital-logo2.png" alt="TMHS Digital Interface 2" class="welcome-logo" />
+CURRENT TIME: <span class="blink">█</span></pre>
+        <div class="logo-container">
+          <img src="TMHSDigital-logo.png" alt="TMHS Digital Interface" class="welcome-logo" />
+          <img src="TMHSDigital-logo2.png" alt="TMHS Digital Interface 2" class="welcome-logo" />
+        </div>
       </div>
     </div>
 
