@@ -128,4 +128,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/tm-hospitality-strategies/?viewAsMember=true)
 
-<sub>Made by TMHS Digital | © 2024</sub>
+<sub>Made by TMHS Digital | © 2025</sub>
